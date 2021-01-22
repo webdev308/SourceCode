@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Meters To Inches App | Source Code</title>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b>Meters To Inches App</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse float-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">Register App</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../LogInApp/index.html">LogIn App</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Meters To Inches App</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div id="ui">
+        <h2>I) Steps to make UI of Meters to Inches App.</h2>
+        <hr>
+        <h5>Step 1 - First create an EditText on top and give it a id of 'ETMetres'.</h5>
+        <h5>Step 2 - Give the hint for EditText as you wish.</h5>
+        <h5>Step 3 - Next create a button below the EditText and give it a id of 'BTNEnter'.</h5>
+        <h5>Step 4 - Give the text to the button of 'Convert'.</h5>
+        <h5>Step 5 - Then create a TextView below the button and give it a id of 'resultValue'.</h5>
+        <h5>Step 6 - Leave the TextView empty as there will be our result.</h5>
+        <h5>Step 7 - Give constraints to every element.</h5>
+        <h5>Step 8 - Style the elements as you wish.</h5>
+        <hr>
+      </div>
+      <div id="backend">
+        <h2>II) Steps for adding backend.</h2>
+        <hr>
+        <h5>Step 1 - First add the instance for three of elements which are EditText, Button, and TextView.</h5>
+        <h5>Step 2 - Give the value of ETMeters, BTNEnter, and resultValue to instances.</h5>
+        <h5>Step 3 - In oncreate() method initialize all the three elements.</h5>
+        <h5>Step 4 - After make a comment and type all the logic for converting metres to inches.</h5>
+        <h5>Step 5 - Then give an onclick listener to BTNEnter.</h5>
+        <h5>Step 6 - Now inside of onclick() method first make a double named multiplier and give it value of 39.37 by which we will multiply the value entered in the EditText.</h5>
+        <h5>Step 7 - Make a double again with the name of result and give it a value of 0.0.</h5>
+        <h5>Step 8 - Make a double again with the name of inchValue and give it a value of 'Double.parseDouble(ETMeters.getText().toString());'</h5>
+        <h5>Step 9 - After, give the result value of 'inchValue*multiplier'</h5>
+        <h5>Step 10 - Then just set the text of 'Double.toString(result);'. If you want then you can add 'Inches' after the result.</h5>
+        <h5>Step 11 - Now run your app and see the magic.</h5>
+        <hr>
+      </div>
+      <div id="errorSolving">
+        <h2>III) Solving Errors in the Meters To inches App.</h2>
+        <hr>
+        <h4>Error 1 - We can type alphabets in the EditText.</h4>
+        <h5>Step 1 - To prevent this error just go in the activity_main.xml.</h5>
+        <h5>Step 2 - Then click on the EditText and search inputType on the search box.</h5>
+        <h5>Step 3 - Open the inputType and just check the number checkbox and uncheck the textPersonName checkbox.</h5>
+        <h5>Step 4 - First Error has been solved . . .</h5>
+        <hr>
+        <h4>Error 2 - When we leave the EditText empty the the app stops working.</h4>
+        <h5>Step 1 - To prevent the app stops working error just go in the MainActivity.java.</h5>
+        <h5>Step 2 - Inside the onclick() method of the BTNEnter cut the statements inside it and type the if else statement in it.</h5>
+        <h5>Step 3 - In the if block give it the condition of 'ETMeters.getText().toString.equals("")'.</h5>
+        <h5>Step 4 - Now in the body of the if statement giver the error message in the resultValue TextView.</h5>
+        <h5>Step 5 - If you want you can give the color to the text red to look like an error.</h5>
+        <h5>Step 6 - Now, in the body of the else block paste the text copied earlier.</h5>
+        <h5>Step 7 - If you want you can give the color to the text of Dark Gray ( DKGRAY in android studio ).</h5>
+        <h5>Step 8 - Your error are now solved now you can run your app and test your app.</h5>
+        <hr>
+      </div>
+      <div id="CopySourceCode">
+        <h2>IV) You can also copy the source code form below -</h2>
+        <hr>
+        <h5>i) Copy the code from below and paste it in 'activity_main.xml' - </h5>
+        <iframe src="activity_main.txt" width="60%" frameborder="0"></iframe>
+        <h5>ii) Copy the code from below and paste it in 'MainActivity.java' - </h5>
+        <iframe src="MainActivity.txt" width="60%" frameborder="0"></iframe>
+        <h5>iii) Now your app is ready ! !</h5>
+      </div>
+      <div id="followTheVideo">
+        <h2>V) You can also follow the videos to make the 'Meters To Inches Application'.</h2>
+        <h5>i) Making UI - </h5>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nrR4HStwOWc" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+
+          <h5>ii) Backend of App - </h5>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/GYCf3KeXqUo" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+            <h5>iii) Error Solving of App - </h5>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KgXwcC3mGdA" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+      </div>
+      <h3>Now your 'Meters To Inches App' is ready.</h3><br><br>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
